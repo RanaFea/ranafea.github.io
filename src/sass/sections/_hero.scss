@@ -1,0 +1,78 @@
+#hero {
+  min-height: 100vh; // Full viewport height
+  height: 100vh;
+  display: flex;
+  align-items: flex-start; // Align content to the top vertically
+  justify-content: flex-start; // Align content to the left horizontally
+  border-bottom: 0px;
+  background: url("assets/monkey.jpg") no-repeat center center; // Add background image
+  background-size: cover; // Ensure the image covers the entire background
+  font-weight: 400;
+  color: $dark-blue-text;
+  padding: 2rem; // Add padding to create space between text and edges
+  margin: 0;
+
+  @include respond(phone) {
+    padding: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem; // Adjust spacing below the title
+    text-align: left; // Align text to the left
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+    }
+    @include respond(phone) {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+    @include respond(phone-xs) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .hero-title-highlight {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem; // Adjust spacing below the title
+    text-align: left; // Align text to the left
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+    }
+    @include respond(phone) {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+    @include respond(phone-xs) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .hero-cta {
+    display: flex;
+    justify-content: flex-start; // Align buttons to the left
+    margin-top: 1rem; // Adjust spacing below the title
+
+    @include respond(tab-port) {
+      justify-content: flex-start;
+    }
+
+    & a {
+      font-size: 2rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
